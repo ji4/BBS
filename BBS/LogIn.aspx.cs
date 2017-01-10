@@ -21,8 +21,5 @@ public partial class LogIn : System.Web.UI.Page
         Server.Transfer("MissPassWord.aspx", true);
     }
 
-    protected void btnsign_Click(object sender, EventArgs e)
-    {
-        
-    }
+
 }
