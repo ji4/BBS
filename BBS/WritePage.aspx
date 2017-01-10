@@ -41,7 +41,7 @@
          <div id="body">
             <div id="ArticalBar">
                 <asp:Button ID="btnSend" runat="server" CssClass="centerBarButton" Text="送出" OnClick="btnSend_Click" />
-                <asp:DropDownList ID="DropDownList" runat="server" CssClass="centerBarButton" Font-Names="Andalus" DataSourceID="SqlDataSource1" DataTextField="CategoryName" DataValueField="CategoryID">
+                <asp:DropDownList ID="listCategory" runat="server" CssClass="centerBarButton" Font-Names="Andalus" DataSourceID="SqlDataSource1" DataTextField="CategoryName" DataValueField="CategoryID">
                     <asp:ListItem>文章分類</asp:ListItem>
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
@@ -49,9 +49,9 @@
             <div id="Artical">
                 <br/>
              標題<br/>
-             <asp:TextBox ID="TextBoxTitle" runat="server" CssClass="txtbox" height="50"></asp:TextBox><br/>
+             <asp:TextBox ID="tbxTitle" runat="server" CssClass="txtbox" height="50"></asp:TextBox><br/>
              內文<br/>
-             <asp:TextBox ID="TextBoxContent" runat="server" CssClass="txtbox" height="250"  TextMode="MultiLine"></asp:TextBox>
+             <asp:TextBox ID="tbxContent" runat="server" CssClass="txtbox" height="250"  TextMode="MultiLine"></asp:TextBox>
             </div>
           </div>
          </div>
