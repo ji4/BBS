@@ -111,7 +111,7 @@
                <p class="auto-style3" style="text-align: center">
        
         
-            <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="Large" Height="30px" Text="送出" Width="57px" OnClick="btnSubmit_Click" />
+            <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="Large" Height="30px" Text="送出" Width="57px" OnClick="btnSubmit_Click" PostBackUrl="~/LogIn.aspx" />
 
         </p>
                </div>
