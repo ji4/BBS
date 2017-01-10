@@ -80,7 +80,7 @@
           <span class="auto-style10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ．Login</span>
         <p class="auto-style8">
             <span class="auto-style10">帳號:</span>
-            <asp:TextBox ID="tbxaccount" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbxAccount" runat="server"></asp:TextBox>
         
         </p>
 
@@ -88,7 +88,7 @@
        
         
             <span class="auto-style10">密碼:</span>
-            <asp:TextBox ID="tbxpassword" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbxPassword" runat="server"></asp:TextBox>
                </p>
                <p class="auto-style3" style="text-align: center">
        
@@ -97,13 +97,11 @@
                <p class="auto-style3" style="text-align: center">
        
         
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        
         
-                   <asp:Button ID="btnsign" runat="server" Text="登入" Font-Bold="False" Font-Size="Medium" Font-Strikeout="False" ForeColor="Gray" Height="30px" Width="53px" OnClick="btnsign_Click" />
-               &nbsp;&nbsp;&nbsp;&nbsp;
-       
-        
+                   <asp:Button ID="btnsign" runat="server" Text="登入" Font-Bold="False" Font-Size="Medium" Font-Strikeout="False" ForeColor="Gray" Height="30px" Width="53px" PostBackUrl="~/HomePage.aspx" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                    <asp:Button ID="btnregister" runat="server" Text="註冊"  Font-Bold="False" Font-Size="Medium" Font-Strikeout="False" ForeColor="Gray" Height="30px" Width="53px" OnClick="btnregister_Click" />
                &nbsp;&nbsp;&nbsp;&nbsp;
        
