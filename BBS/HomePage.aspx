@@ -29,7 +29,6 @@
                 <asp:Label ID="lblSign" runat="server" Text="註冊"></asp:Label></a></dd>
 			<dd class="last"><a href="Personal.aspx">
                 <asp:Label ID="lblPersonal" runat="server" Text="個人頁面"></asp:Label></a></dd>
-		    <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
 		</dl>   
     </li> 
     </ul>

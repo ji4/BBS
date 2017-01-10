@@ -11,17 +11,11 @@ public partial class HomePage : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.Form["tbxAccount"] != null)
-        {
-            userAccount = Request.Form["tbxAccount"];
-            lblName.Text = userAccount;
-        }
+            userAccount = Request.QueryString["tbxAccount"];
     }
 
     protected void btnWrite_Click(object sender, EventArgs e)
     {
-        //btnWrite.PostBackUrl = "~/WritePage.aspx?userAccount=" + userAccount;
-        btnWrite.PostBackUrl = "~/WritePage.aspx";
-        //Response.Redirect("WritePage.aspx ? userAccount = " + userAccount);
-        //Server.Transfer("WritePage.aspx?userAccount="+userAccount, false);
+        Server.Transfer("WritePage.aspx?userAccount="+userAccount, true);
     }
 }

@@ -88,20 +88,19 @@
        
         
             <span class="auto-style10">密碼:</span>
-            <asp:TextBox ID="tbxPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="tbxPassword" runat="server"></asp:TextBox>
                </p>
                <p class="auto-style3" style="text-align: center">
        
         
-                   <asp:Label ID="lblMsg" runat="server" ForeColor="#FF3300"></asp:Label>
-               </p>
+                   &nbsp;</p>
                <p class="auto-style3" style="text-align: center">
        
         
                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        
         
-                   <asp:Button ID="btnsign" runat="server" Text="登入" Font-Bold="False" Font-Size="Medium" Font-Strikeout="False" ForeColor="Gray" Height="30px" Width="53px" OnClick="btnsign_Click" />
+                   <asp:Button ID="btnsign" runat="server" Text="登入" Font-Bold="False" Font-Size="Medium" Font-Strikeout="False" ForeColor="Gray" Height="30px" Width="53px" PostBackUrl="~/HomePage.aspx" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                    <asp:Button ID="btnregister" runat="server" Text="註冊"  Font-Bold="False" Font-Size="Medium" Font-Strikeout="False" ForeColor="Gray" Height="30px" Width="53px" OnClick="btnregister_Click" />
                &nbsp;&nbsp;&nbsp;&nbsp;
