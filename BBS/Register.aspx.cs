@@ -34,5 +34,6 @@ public partial class Register : System.Web.UI.Page
         conn.Open();
         int rows = cmd.ExecuteNonQuery();//檢查結果, 影響幾筆資料, >1成功
         conn.Close();
+        btnSubmit.PostBackUrl = "~/HomePage.aspx?user=" + tbxUserName.Text;
     }
 }
