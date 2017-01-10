@@ -48,7 +48,8 @@
                 <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click" />
             </div>
-            <asp:ListView ID="listViewArtical" runat="server"></asp:ListView>
+            <asp:ListView ID="listViewArtical" runat="server" DataSourceID="SqlDataSource1"></asp:ListView>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
             文章預覽區
           </div>
          </div>
