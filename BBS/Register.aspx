@@ -36,10 +36,6 @@
         .auto-style5 {
             font-size: large;
         }
-        .auto-style6 {
-            font-size: small;
-            color: #FF9933;
-        }
         .auto-style8 {
             text-align: center;
             width: 100%;
@@ -72,7 +68,7 @@
            
         <p class="auto-style8">
             <span class="auto-style2">使用者帳號</span>
-            <asp:TextBox ID="tbxUserAccount" runat="server" CssClass="auto-style4"></asp:TextBox>
+            <asp:TextBox ID="tbxUserID" runat="server" CssClass="auto-style4"></asp:TextBox>
         
         </p>
                <p class="auto-style8">
@@ -87,7 +83,7 @@
             </p>
 
         <p class="auto-style8">
-            <span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 電子郵件</span>
+            <span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 電子郵件</span>
             <asp:TextBox ID="tbxEmail" runat="server" CssClass="auto-style4" Width="213px"></asp:TextBox>
         
         
@@ -96,8 +92,8 @@
        <div class="auto-style8">
             <span class="auto-style4"><span class="auto-style5">性別</span></span>
             <asp:RadioButtonList ID="RadioBtnListSex" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                <asp:ListItem><span class="auto-style4"><span class="auto-style5">男</span></span></asp:ListItem>
-                <asp:ListItem><span class="auto-style4"><span class="auto-style5">女</span></span></asp:ListItem>
+                <asp:ListItem>男</asp:ListItem>
+                <asp:ListItem>女</asp:ListItem>
             </asp:RadioButtonList>
             
             </div>
@@ -115,7 +111,7 @@
                <p class="auto-style3" style="text-align: center">
        
         
-            <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="Large" Height="30px" Text="送出" Width="57px" />
+            <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="Large" Height="30px" Text="送出" Width="57px" OnClick="btnSubmit_Click" />
 
         </p>
                </div>
