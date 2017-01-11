@@ -9,14 +9,14 @@ using System.Web.UI.WebControls;
 
 public partial class WritePage : System.Web.UI.Page
 {
-    string userAccount;
+    string userID;
     string szInsertArticle = "insert into [articleInfo] " +
         "([articleTitle], [articleContent], [PostTime], [ReplyCount], [PostUser], [CategoryID])" +
         "values (@articleTitle, @articleContent, @PostTime, @ReplyCount, @PostUser, @CategoryID)";
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["userAccount"] != null)
-            userAccount = Request.QueryString["userAccount"];
+        if (Request.QueryString["user"] != null)
+            userID = Request.QueryString["user"];
     }
 
     protected void btnSend_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ public partial class WritePage : System.Web.UI.Page
         cmd.Parameters.Add("@articleContent", SqlDbType.VarChar).Value = tbxContent.Text;
         cmd.Parameters.Add("@PostTime", SqlDbType.DateTime).Value = DateTime.Now;
         cmd.Parameters.Add("@ReplyCount", SqlDbType.Int).Value = 0;
-        cmd.Parameters.Add("@PostUser", SqlDbType.NVarChar).Value = userAccount;
+        cmd.Parameters.Add("@PostUser", SqlDbType.NVarChar).Value = userID;
         cmd.Parameters.Add("@CategoryID", SqlDbType.Int).Value = int.Parse(listCategory.SelectedValue);
 
         conn.Open();

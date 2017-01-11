@@ -9,21 +9,14 @@ public partial class HomePage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //新增這段
-        TextBox textbox = new TextBox();
-        if (PreviousPage == null && !IsCrossPagePostBack)
-        {
-            //Response.Write("沒有來源網頁");
-        }
-        else
-        {
-            textbox = (TextBox)PreviousPage.FindControl("tbxUserID");
-            lblPersonal.Text = textbox.Text;
-        }
+        if (Request.QueryString["user"] != null)
+            lblPersonal.Text = Request.QueryString["user"];
     }
 
     protected void btnWrite_Click(object sender, EventArgs e)
     {
-        Server.Transfer("WritePage.aspx", true);
+        if (Request.QueryString["user"] != null)
+            Server.Transfer("WritePage.aspx", true);
+        else Response.Redirect("~/Login.aspx");
     }
 }

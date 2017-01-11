@@ -22,4 +22,13 @@ public partial class LogIn : System.Web.UI.Page
     }
 
 
+
+    protected void btnsign_Click(object sender, EventArgs e)
+    {
+        if (tbxUserID.Text != "" && tbxPassword.Text != "")
+            //Response.Redirect("~/HomePage.aspx?user=" + tbxUserID.Text);
+            //btnsign.PostBackUrl = "~/HomePage.aspx?user=" + tbxUserID.Text;
+            Server.Transfer("HomePage.aspx?user=" + tbxUserID.Text, true);
+        else lblMsg.Text = "請輸入帳號與密碼";
+    }
 }
