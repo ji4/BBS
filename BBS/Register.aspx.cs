@@ -13,9 +13,11 @@ public partial class Register : System.Web.UI.Page
         "([UserID], [UserName], [Password], [Gender], [Email], [CreateDate])" +
         "values (@UserID, @UserName, @Password, @Gender, @Email, @CreateDate)";
 
+    public TextBox shareinput { get; private set; }   //新增這行
+
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        shareinput = tbxUserID;  //新增這行
     }
 
     protected void btnSubmit_Click(object sender, EventArgs e)
@@ -34,5 +36,21 @@ public partial class Register : System.Web.UI.Page
         conn.Open();
         int rows = cmd.ExecuteNonQuery();//檢查結果, 影響幾筆資料, >1成功
         conn.Close();
+        btnSubmit.PostBackUrl = "~/HomePage.aspx?user=" + tbxUserName.Text;  //新增這行
+
+    }
+
+    protected void tbxUserID_TextChanged(object sender, EventArgs e)
+    {
+        /* DataView dv = ((DataView)SqlDataSource1.Select(new DataSourceSelectArguments()));
+         dv.RowFilter = "LastName = '" + tbxUserID.Text.Trim() + "'";
+         if (dv.Count >= 1)
+         {
+             Label1.Text = "已有相關資料";
+         }
+         else
+         {
+             Label1.Text = "可以註冊";
+         }*/
     }
 }
