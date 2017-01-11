@@ -23,24 +23,30 @@
    <dt><a href="#"></a></dt>
    <dd><a href="LogIn.aspx">
                 <asp:Label ID="lblLogin" runat="server" Text="登入"></asp:Label></a></dd>
-            <dd><a href="#">
-                <asp:Label ID="lblLogout" runat="server" Text="登出"></asp:Label></a></dd>
+            <dd>
+                <asp:LinkButton ID="linkBtnLogout" runat="server" Text="登出" OnClick="linkBtnLogout_Click"></asp:LinkButton></dd>
             <dd><a href="Register.aspx">
                 <asp:Label ID="lblSign" runat="server" Text="註冊"></asp:Label></a></dd>
+<<<<<<< HEAD
    <dd class="last"><a href="Personal.aspx">
                 <asp:Button ID="lblPersonal" runat="server" Text="個人頁面"></asp:Button></a></dd>
   </dl>   
+=======
+			<dd class="last"><a href="Personal.aspx">
+                <asp:Button ID="lblPersonal" runat="server" Text="個人頁面" OnClick="lblPersonal_Click"></asp:Button></a></dd>
+		</dl>   
+>>>>>>> refs/remotes/ji4/master
     </li> 
     </ul>
 
         </div>
         <div id="center">
          <div id="Sidebar">
-            <asp:Button ID="btnChat" runat="server" CssClass="sideBarButton" Text="閒聊"/>
-            <asp:Button ID="btnFood" runat="server" CssClass="sideBarButton" Text="美食"/>
-            <asp:Button ID="btnSport" runat="server" CssClass="sideBarButton" Text="運動"/>
-            <asp:Button ID="btnBoy" runat="server" CssClass="sideBarButton" Text="男"/>
-            <asp:Button ID="btnGirl" runat="server" CssClass="sideBarButton" Text="女"/>
+            <asp:Button ID="btnChat" runat="server" CssClass="sideBarButton" Text="閒聊" OnClick="btnChat_Click"/>
+            <asp:Button ID="btnFood" runat="server" CssClass="sideBarButton" Text="美食" OnClick="btnFood_Click"/>
+            <asp:Button ID="btnSport" runat="server" CssClass="sideBarButton" Text="運動" OnClick="btnSport_Click"/>
+            <asp:Button ID="btnBoy" runat="server" CssClass="sideBarButton" Text="男" OnClick="btnBoy_Click"/>
+            <asp:Button ID="btnGirl" runat="server" CssClass="sideBarButton" Text="女" OnClick="btnGirl_Click"/>
             </div>
          <div id="body">
             <div id="ArticalBar">
@@ -178,7 +184,7 @@
                     </tr>
                 </SelectedItemTemplate>
              </asp:ListView>
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID;"></asp:SqlDataSource>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID  ORDER BY [articleID] DESC;"></asp:SqlDataSource>
             文章預覽區
              </div>
           </div>

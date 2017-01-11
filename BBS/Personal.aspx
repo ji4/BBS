@@ -100,11 +100,11 @@
            <div class="main" >
           
            <div class="photo">
-               <asp:Image ID="Image2" runat="server" Height="318px" Width="315px" ImageUrl="~/image/女生.jpg" />
+               <asp:Image ID="userPhoto" runat="server" Height="318px" Width="315px" ImageUrl="~/image/女生.jpg" />
              </div>
         <p class="auto-style8">
             姓名:
-            <asp:Label ID="LabelName" runat="server"></asp:Label>
+            <asp:Label ID="lblName" runat="server"></asp:Label>
         
         </p>
 
@@ -112,7 +112,7 @@
        
         
             帳號:
-            <asp:Label ID="Labeluser" runat="server"></asp:Label>
+            <asp:Label ID="lblUser" runat="server"></asp:Label>
                </p>
                </div>
            </div>

@@ -10,6 +10,7 @@ using System.Data;
 public partial class ArticleContent : System.Web.UI.Page
 {
     string id;
+    string[] strCategoryName = { "0", "閒聊", "美食", "運動", "男", "女" };
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -35,6 +36,8 @@ public partial class ArticleContent : System.Web.UI.Page
 
         SqlDataReader reader = cmd.ExecuteReader();
 
+        //0 articleID, 1 articleTitle, 2 articleContent, 3 PostTime, 4 ReplyCount, 5 LastReplyTime, 6 PostUser, 7 CategoryID
+
         while (reader.Read())
         {
             lblArticleTitle.Text = reader["articleTitle"].ToString();
@@ -44,8 +47,11 @@ public partial class ArticleContent : System.Web.UI.Page
             lblCategoryID.Text = reader["CategoryID"].ToString();
         }
         reader.Close();
-        //0 articleID, 1 articleTitle, 2 articleContent, 3 PostTime, 4 ReplyCount, 5 LastReplyTime, 6 PostUser, 7 CategoryID
 
+        for (int i = 1; i <= 5; i++)
+            if (lblCategoryID.Text == i.ToString())
+                lblCategoryID.Text = strCategoryName[i];
+       
         int rows = cmd.ExecuteNonQuery();//檢查結果, 影響幾筆資料, >1成功
         conn.Close();
         //btnSubmit.PostBackUrl = "~/HomePage.aspx?user=" + tbxUserName.Text;  //新增這行
