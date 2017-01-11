@@ -23,8 +23,8 @@
 			<dt><a href="#"></a></dt>
 			<dd><a href="LogIn.aspx">
                 <asp:Label ID="lblLogin" runat="server" Text="登入"></asp:Label></a></dd>
-            <dd><a href="#">
-                <asp:Label ID="lblLogout" runat="server" Text="登出"></asp:Label></a></dd>
+            <dd>
+                <asp:LinkButton ID="linkBtnLogout" runat="server" Text="登出" OnClick="linkBtnLogout_Click"></asp:LinkButton></dd>
             <dd><a href="Register.aspx">
                 <asp:Label ID="lblSign" runat="server" Text="註冊"></asp:Label></a></dd>
 			<dd class="last"><a href="Personal.aspx">

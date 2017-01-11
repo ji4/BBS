@@ -60,4 +60,9 @@ public partial class HomePage : System.Web.UI.Page
         SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 5  ORDER BY [articleID] DESC";
     }
 
+
+    protected void linkBtnLogout_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("HomePage.aspx", true);
+    }
 }
