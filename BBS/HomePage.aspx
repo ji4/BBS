@@ -48,10 +48,28 @@
                 <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click" />
             </div>
-            <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1" style="margin-right: 0px; margin-top: 165px">
-
+            <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1">
+                <AlternatingItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                        </td>
+                    </tr>
+                </AlternatingItemTemplate>
                 <EditItemTemplate>
-                    <tr style="background-color: #999999;">
+                    <tr style="">
                         <td>
                             <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="更新" />
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="取消" />
@@ -74,7 +92,7 @@
                     </tr>
                 </EditItemTemplate>
                 <EmptyDataTemplate>
-                    <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                    <table runat="server" style="">
                         <tr>
                             <td>未傳回資料。</td>
                         </tr>
@@ -104,12 +122,7 @@
                     </tr>
                 </InsertItemTemplate>
                 <ItemTemplate>
-                    <tr style="background-color: #E0FFFF;color: #333333;">
-                                                <td>
-
-                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server" ><%# Eval("articleTitle") %></asp:LinkButton>
-
-                        </td>
+                    <tr style="">
                         <td>
                             <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
                         </td>
@@ -131,8 +144,8 @@
                     <table runat="server">
                         <tr runat="server">
                             <td runat="server">
-                                <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                    <tr runat="server" style="background-color: #E0FFFF;color: #333333;">
+                                <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                    <tr runat="server" style="">
                                         <th runat="server">articleTitle</th>
                                         <th runat="server">PostTime</th>
                                         <th runat="server">PostUser</th>
@@ -145,13 +158,12 @@
                             </td>
                         </tr>
                         <tr runat="server">
-                            <td runat="server" style="text-align: center;background-color: #5D7B9D; font-family: Verdana, Arial, Helvetica, sans-serif;color: #FFFFFF;">
-                            </td>
+                            <td runat="server" style=""></td>
                         </tr>
                     </table>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
-                    <tr style="background-color: #E2DED6;font-weight: bold;color: #333333;">
+                    <tr style="">
                         <td>
                             <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
                         </td>
