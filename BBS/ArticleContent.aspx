@@ -48,7 +48,8 @@
                 <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click"/>
             </div>
-            <asp:ListView ID="listViewArticle" runat="server"></asp:ListView>
+            <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1"></asp:ListView>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
             文章標題
             內文
           </div>
