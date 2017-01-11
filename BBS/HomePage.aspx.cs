@@ -7,15 +7,23 @@ using System.Web.UI.WebControls;
 
 public partial class HomePage : System.Web.UI.Page
 {
-    string userAccount;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.Form["tbxAccount"] != null)
-            userAccount = Request.QueryString["tbxAccount"];
+        //新增這段
+        TextBox textbox = new TextBox();
+        if (PreviousPage == null && !IsCrossPagePostBack)
+        {
+            //Response.Write("沒有來源網頁");
+        }
+        else
+        {
+            textbox = (TextBox)PreviousPage.FindControl("tbxUserID");
+            lblPersonal.Text = textbox.Text;
+        }
     }
 
     protected void btnWrite_Click(object sender, EventArgs e)
     {
-        Server.Transfer("WritePage.aspx?userAccount="+userAccount, true);
+        Server.Transfer("WritePage.aspx", true);
     }
 }
