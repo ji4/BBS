@@ -19,15 +19,4 @@ public partial class HomePage : System.Web.UI.Page
             Server.Transfer("WritePage.aspx", true);
         else Response.Redirect("~/Login.aspx");
     }
-
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        Button change = (Button)sender;
-        //int i;
-        //i = 15;
-
-        Label empid = (Label)change.Parent.FindControl("員工編號Label");
-        empid.Text = "id: " + empid.Text;
-    }
-
 }
