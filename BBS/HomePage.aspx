@@ -45,7 +45,7 @@
          <div id="body">
             <div id="ArticalBar">
                 <asp:Button ID="btnHot" runat="server" CssClass="centerBarButton" Text="熱門" />
-                <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" OnClick="btnNew_Click" />
+                <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click" />
             </div>
              <div id="articleC">

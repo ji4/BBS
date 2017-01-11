@@ -1,7 +1,6 @@
 ﻿body {
     background-image:url("img/beach-1835424.jpg")
 }
-
         .logo {
             width: 150px;
             height: 150px;
@@ -22,7 +21,31 @@
                 background:rgba(100%,100%,100%,0.8); /*80%白色*/
                 color:darkcyan;
             }
+.title {
+    width: 450px;
+    float:left;
+    margin-left:20px;
+    margin-top:20px;
+            font-size:xx-large;
+            font-family:Microsoft JhengHei;
+            font-weight:900;
+            color:#808080; 
+}
+.author {
+    font-size:x-large;
+    width: 50px;
+}
+.time {
+    font-size:small;
+    width: 100px;
+    margin-left:20px;
+}
+.content {
+    font-size:medium;
+    margin-left:20px;
+}
 .centerBarButton {
+             margin-left:20px;
             width: 250px;
             height: 50px;
             float:right;
@@ -51,23 +74,7 @@
             border:1px #808080 dashed;
 }
 
-.txtbox{
-    width:600px;
-    outline: none;
-    display: block;
-    padding: 4px 8px;
-    border: 1px dashed #DBDBDB;
-    color: #3F3F3F;
-    font-family: 'Droid Sans',Tahoma,Arial,Verdana sans-serif;
-    font-size: 16px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    -webkit-transition: background 0.2s linear, box-shadow 0.6s linear;
-    -moz-transition: background 0.2s linear, box-shadow 0.6s linear;
-    -o-transition: background 0.2s linear, box-shadow 0.6s linear;
-    transition: background 0.2s linear, box-shadow 0.6s linear;
-}
+
 .txtbox:focus {
     background: #F7F7F7;
     border: dashed 1px #969696;
@@ -180,7 +187,7 @@
     background-color:rgba(100%,100%,100%,0.1); /*10%白色*/
 }
 #body{
-    width:initial;
+    width:750px;
     height:600px;
     text-align:left;
     line-height:50px;
@@ -188,7 +195,25 @@
     color:#333;
     font-weight:bold;
     background-color:#fffaf3;
+    background:rgba(100%,100%,100%,0.8); /*80%白色*/
     float:left;
+}
+#ArticalContent {
+    width:750px;
+    height:450px;
+    text-align:left;
+    line-height:50px;
+    font-size:15px;
+    color:#333;
+    font-weight:bold;
+    background-color:#fffaf3;
+    background:rgba(100%,100%,100%,0.5); /*80%白色*/
+    float:left;
+}
+#ArticalBar {
+    width:750px;
+    margin-right: auto;
+    margin-left: auto;
 }
 #ArticalBar {
     width:750px;
