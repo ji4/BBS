@@ -47,10 +47,17 @@
                 <asp:Button ID="btnHot" runat="server" CssClass="centerBarButton" Text="熱門" />
                 <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click"/>
+                <asp:Label ID="lblArticleTitle" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblArticleContent" runat="server" Text="Label"></asp:Label>
+                <br>
+                <asp:Label ID="lblPostTime" runat="server" Text="Label"></asp:Label>
+                <br>
+                <asp:Label ID="lblPostUser" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblCategoryID" runat="server" Text="Label"></asp:Label>
             </div>
-            <asp:ListView ID="listViewArticle" runat="server"></asp:ListView>
-            文章標題
-            內文
+             
+             <br />
+             <br />
           </div>
          </div>
         <div style='clear:both;'></div>

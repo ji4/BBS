@@ -19,4 +19,11 @@ public partial class HomePage : System.Web.UI.Page
             Server.Transfer("WritePage.aspx", true);
         else Response.Redirect("~/Login.aspx");
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        LinkButton change = (LinkButton)sender;
+        Label articleID = (Label)change.Parent.FindControl("articleIDLabel");
+        Server.Transfer("ArticleContent.aspx?id=" + articleID.Text, true);
+    }
 }

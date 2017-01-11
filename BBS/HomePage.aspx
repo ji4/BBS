@@ -113,7 +113,7 @@
                             <asp:Label ID="articleIDLabel" runat="server" Text='<%# Eval("articleID") %>' />
                         </td>
                         <td>
-                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server"  Text=''><%# Eval("articleTitle") %></asp:LinkButton>
+                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server" onClick="Button1_Click"><%# Eval("articleTitle") %></asp:LinkButton>
                         </td>
                         <td>
                             <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
