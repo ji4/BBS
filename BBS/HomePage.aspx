@@ -48,7 +48,141 @@
                 <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click" />
             </div>
-            <asp:ListView ID="listViewArticle" runat="server"></asp:ListView>
+            <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1">
+                <AlternatingItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                        </td>
+                    </tr>
+                </AlternatingItemTemplate>
+                <EditItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="更新" />
+                            <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="取消" />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="articleTitleTextBox" runat="server" Text='<%# Bind("articleTitle") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="PostTimeTextBox" runat="server" Text='<%# Bind("PostTime") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="PostUserTextBox" runat="server" Text='<%# Bind("PostUser") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="ReplyCountTextBox" runat="server" Text='<%# Bind("ReplyCount") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                        </td>
+                    </tr>
+                </EditItemTemplate>
+                <EmptyDataTemplate>
+                    <table runat="server" style="">
+                        <tr>
+                            <td>未傳回資料。</td>
+                        </tr>
+                    </table>
+                </EmptyDataTemplate>
+                <InsertItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="插入" />
+                            <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="清除" />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="articleTitleTextBox" runat="server" Text='<%# Bind("articleTitle") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="PostTimeTextBox" runat="server" Text='<%# Bind("PostTime") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="PostUserTextBox" runat="server" Text='<%# Bind("PostUser") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="ReplyCountTextBox" runat="server" Text='<%# Bind("ReplyCount") %>' />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                        </td>
+                    </tr>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                        </td>
+                    </tr>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <table runat="server">
+                        <tr runat="server">
+                            <td runat="server">
+                                <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                    <tr runat="server" style="">
+                                        <th runat="server">articleTitle</th>
+                                        <th runat="server">PostTime</th>
+                                        <th runat="server">PostUser</th>
+                                        <th runat="server">ReplyCount</th>
+                                        <th runat="server">CategoryID</th>
+                                    </tr>
+                                    <tr id="itemPlaceholder" runat="server">
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr runat="server">
+                            <td runat="server" style=""></td>
+                        </tr>
+                    </table>
+                </LayoutTemplate>
+                <SelectedItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
+                        </td>
+                        <td>
+                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                        </td>
+                    </tr>
+                </SelectedItemTemplate>
+             </asp:ListView>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT [articleTitle], [PostTime], [PostUser], [ReplyCount], [CategoryID] FROM [articleInfo]"></asp:SqlDataSource>
             文章預覽區
           </div>
          </div>
