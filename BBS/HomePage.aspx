@@ -51,6 +51,9 @@
             <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1">
                 <EditItemTemplate>
                     <tr style="">
+                                                <td>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("articleID") %>' />
+                        </td>
                         <td>
                             <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="更新" />
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="取消" />
@@ -105,11 +108,10 @@
                 <ItemTemplate>
                     <tr style="">
                         <td>
-                        <td>
-
-                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server"  Text='<%# Eval("articleTitle") %>'>LinkButton</asp:LinkButton>
-
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("articleID") %>' Visible="False" />
                         </td>
+                        <td>
+                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server" onClick="Button1_Click"><%# Eval("articleTitle") %></asp:LinkButton>
                         </td>
                         <td>
                             <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
@@ -131,6 +133,7 @@
                             <td runat="server">
                                 <table id="itemPlaceholderContainer" runat="server" border="0" style="">
                                     <tr runat="server" style="">
+                                        
                                         <th runat="server">articleTitle</th>
                                         <th runat="server">PostTime</th>
                                         <th runat="server">PostUser</th>
@@ -167,7 +170,7 @@
                     </tr>
                 </SelectedItemTemplate>
              </asp:ListView>
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT [articleTitle], [PostTime], [PostUser], [ReplyCount], [CategoryID] FROM [articleInfo]"></asp:SqlDataSource>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT [articleID], [articleTitle], [PostTime], [PostUser], [ReplyCount], [CategoryID] FROM [articleInfo]"></asp:SqlDataSource>
             文章預覽區
           </div>
          </div>
