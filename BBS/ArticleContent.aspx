@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="StyleSheet_main.css" type="text/css"/>
+    <link rel="stylesheet" href="StyleSheet_articleContent.css" type="text/css"/>
     <title></title>
 
 </head>
@@ -44,13 +44,12 @@
             </div>
          <div id="body">
             <div id="ArticalBar">
-                <asp:Button ID="btnHot" runat="server" CssClass="centerBarButton" Text="熱門" />
-                <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
-                <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click"/>
+                <asp:Label ID="lblPostUser" runat="server"   />
+                <asp:Label ID="lblArticleTitle" runat="server"   />
+                <asp:Button ID="btnResponse" runat="server" CssClass="centerBarButton" Text="回文" OnClick="btnWrite_Click"/>
             </div>
-            <asp:ListView ID="listViewArticle" runat="server"></asp:ListView>
-            文章標題
-            內文
+            
+            
           </div>
          </div>
         <div style='clear:both;'></div>

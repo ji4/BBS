@@ -52,19 +52,19 @@
                 <AlternatingItemTemplate>
                     <tr style="">
                         <td>
-                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
+                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="ReadOnly" />
                         </td>
                     </tr>
                 </AlternatingItemTemplate>
@@ -75,19 +75,19 @@
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="取消" />
                         </td>
                         <td>
-                            <asp:TextBox ID="articleTitleTextBox" runat="server" Text='<%# Bind("articleTitle") %>' />
+                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="Edit" />
                         </td>
                         <td>
-                            <asp:TextBox ID="PostTimeTextBox" runat="server" Text='<%# Bind("PostTime") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="Edit" />
                         </td>
                         <td>
-                            <asp:TextBox ID="PostUserTextBox" runat="server" Text='<%# Bind("PostUser") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="Edit" />
                         </td>
                         <td>
-                            <asp:TextBox ID="ReplyCountTextBox" runat="server" Text='<%# Bind("ReplyCount") %>' />
+                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="Edit" />
                         </td>
                         <td>
-                            <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="Edit" />
                         </td>
                     </tr>
                 </EditItemTemplate>
@@ -101,42 +101,42 @@
                 <InsertItemTemplate>
                     <tr style="">
                         <td>
-                            <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="插入" />
+                            <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="插入" ValidationGroup="Insert" />
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="清除" />
                         </td>
                         <td>
-                            <asp:TextBox ID="articleTitleTextBox" runat="server" Text='<%# Bind("articleTitle") %>' />
+                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="Insert" ValidationGroup="Insert" />
                         </td>
                         <td>
-                            <asp:TextBox ID="PostTimeTextBox" runat="server" Text='<%# Bind("PostTime") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="Insert" ValidationGroup="Insert" />
                         </td>
                         <td>
-                            <asp:TextBox ID="PostUserTextBox" runat="server" Text='<%# Bind("PostUser") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="Insert" ValidationGroup="Insert" />
                         </td>
                         <td>
-                            <asp:TextBox ID="ReplyCountTextBox" runat="server" Text='<%# Bind("ReplyCount") %>' />
+                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="Insert" ValidationGroup="Insert" />
                         </td>
                         <td>
-                            <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="Insert" ValidationGroup="Insert" />
                         </td>
                     </tr>
                 </InsertItemTemplate>
                 <ItemTemplate>
                     <tr style="">
                         <td>
-                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
+                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="ReadOnly" />
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -158,26 +158,32 @@
                             </td>
                         </tr>
                         <tr runat="server">
-                            <td runat="server" style=""></td>
+                            <td runat="server" style="">
+                                <asp:DataPager ID="DataPager1" runat="server">
+                                    <Fields>
+                                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
+                                    </Fields>
+                                </asp:DataPager>
+                            </td>
                         </tr>
                     </table>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
                     <tr style="">
                         <td>
-                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
+                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
+                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="ReadOnly" />
                         </td>
                     </tr>
                 </SelectedItemTemplate>

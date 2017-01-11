@@ -1,0 +1,215 @@
+﻿body {
+    background-image:url("img/beach-1835424.jpg")
+}
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            float:left;
+        }
+        .sideBarButton {
+            width: 320px;
+            height: 120px;
+            float:right;
+            background:rgba(100%,100%,100%,0.1); /*10%白色*/
+            border:2px blue none;
+            font-size:x-large;
+            font-family:Microsoft JhengHei;
+            font-weight:700;
+            color:ghostwhite;  
+        }
+            .sideBarButton:hover {
+                background:rgba(100%,100%,100%,0.8); /*80%白色*/
+                color:darkcyan;
+            }
+.centerBarButton {
+            width: 250px;
+            height: 50px;
+            float:right;
+            background:rgba(100%,100%,100%,0.1); /*10%白色*/
+            border:2px blue none;
+            font-size:large;
+            font-family:Microsoft JhengHei;
+            font-weight:700;
+            color:darkcyan; 
+            border:1px #808080 dashed;
+}
+    .centerBarButton:hover {
+             background:rgba(100%,100%,100%,0.8); /*80%白色*/
+             color:lightblue;
+    }
+.centerBarTxt {
+            width: 250px;
+            height: 50px;
+            float:right;
+            background:rgba(100%,100%,100%,0.1); /*10%白色*/
+            border:2px blue none;
+            font-size:large;
+            font-family:Microsoft JhengHei;
+            font-weight:700;
+            color:darkcyan; 
+            border:1px #808080 dashed;
+}
+
+.txtbox{
+    width:600px;
+    outline: none;
+    display: block;
+    padding: 4px 8px;
+    border: 1px dashed #DBDBDB;
+    color: #3F3F3F;
+    font-family: 'Droid Sans',Tahoma,Arial,Verdana sans-serif;
+    font-size: 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 0.2s linear, box-shadow 0.6s linear;
+    -moz-transition: background 0.2s linear, box-shadow 0.6s linear;
+    -o-transition: background 0.2s linear, box-shadow 0.6s linear;
+    transition: background 0.2s linear, box-shadow 0.6s linear;
+}
+.txtbox:focus {
+    background: #F7F7F7;
+    border: dashed 1px #969696;
+    -webkit-box-shadow: 2px 2px 7px #E8E8E8 inset;
+    -moz-box-shadow: 2px 2px 7px #E8E8E8 inset;
+    box-shadow: 2px 2px 7px #E8E8E8 inset;
+}
+
+            /* 整體設置*/ 
+.navigation {
+	margin:0; 
+	padding:0;
+    float:right;
+	list-style-type:none; 
+	font:14px Arial; 
+    height:80px;
+	}
+
+.navigation li {
+	float:right; 
+    padding:0; 
+	margin:0 10px 0 0; 
+	_margin:0 2px 0 0; 
+	width:128px;
+    height:80px;
+	}
+
+/* 設置選單區塊*/
+.navigation li dl { 
+	width:128px;/*ie6*/
+    height:80px;
+    margin:0; 
+	padding:0;
+
+	}
+	
+.navigation li dt a , .navigation li dd a{ display:block;}
+
+
+/* 設置主選單dt */
+.navigation li dt {
+	margin:0;
+	padding: 5px;
+	text-align:center;
+    background-image:url("img/menu.png");
+	font-size: 14px;
+	font-weight: bold;
+	height:90px;
+	overflow:hidden;
+	}
+
+.navigation li dt a ,.navigation  li dt a:visited {
+	display:block; 
+    text-decoration:none;
+	}
+
+/* 設置子選單dd */
+.navigation li dd { 
+	margin:0; 
+    padding:0; 
+	color: #333; 
+	border-bottom:dotted 1px #666;
+	}
+	
+.navigation li dd.last {
+	border-bottom:0;
+	}	
+
+.navigation li dd a, .navigation  li dd a:visited {
+	display:block; 
+	color:#333; 
+    text-align:center;
+    text-decoration:none; 
+	padding:10px 20px 10px 20px;
+    }
+
+	
+/*隱藏子選單*/
+.navigation li dd { display:none;}
+
+
+/* 滑鼠滑入顯示子選單 */
+.navigation li:hover dd, .navigation li a:hover dd { display:block;}
+
+/*ie6 hack*/
+.navigation li:hover,.navigation li a:hover { border:0;}
+.navigation table { border-collapse:collapse; 
+    padding:0; 		
+	text-align:left;
+	}
+#Header{
+    width:1250px;
+    height:150px;
+    line-height:80px;
+    font-size:15px;
+    color:#fffaf3;
+    font-weight:bold;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+#Sidebar{
+    width:320px;
+    float:left;
+    height:600px;
+    text-align:center;
+    line-height:120px;
+    color:#ffffff;
+    font-weight:bold;
+    background-color:rgba(100%,100%,100%,0.1); /*10%白色*/
+}
+#body{
+    width:initial;
+    height:600px;
+    text-align:left;
+    line-height:50px;
+    font-size:15px;
+    color:#333;
+    font-weight:bold;
+    background-color:#fffaf3;
+    float:left;
+}
+#ArticalBar {
+    width:750px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#Artical {
+    width:720px;
+    margin-left: 30px;
+}
+#center {
+    width:1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#Footer{
+    width:initial;
+    height:150px;
+    text-align:center;
+    line-height:80px;
+    font-size:15px;
+    color:#fffaf3;
+    font-weight:bold;
+}
