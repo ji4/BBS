@@ -65,4 +65,11 @@ public partial class HomePage : System.Web.UI.Page
     {
         Response.Redirect("HomePage.aspx", true);
     }
+
+    protected void lblPersonal_Click(object sender, EventArgs e)
+    {
+        if (Request.QueryString["user"] != null)
+            Server.Transfer("Personal.aspx", true);
+        else Response.Redirect("LogIn.aspx");
+    }
 }
