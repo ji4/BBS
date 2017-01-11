@@ -20,7 +20,7 @@ public partial class ArticleContent : System.Web.UI.Page
         string szSelectArticleInfo = "select * from [articleInfo] where [articleID] = " + id;
         //string szSelectArticleInfo = "select [CategoryName] from [Category], * from [articleInfo] where [Category.CategoryID] = " + id;
 
-        string connstr = "Data Source=WIN-N4LTN1FOFQH\\SQLEXPRESS;Initial Catalog=UNI;" +
+        string connstr = "Data Source=RUE-PC\\SQLEXPRESS;Initial Catalog=UNI;" +
             "Integrated Security=True";
         SqlConnection conn = new SqlConnection(connstr);
         SqlCommand cmd = new SqlCommand(szSelectArticleInfo, conn);

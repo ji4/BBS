@@ -18,18 +18,18 @@
         <div id="Header">
             <a href="HomePage.aspx"><img class="logo" src="img/uniPlay_logo.png"/></a>
 <ul class="navigation">
-	<li>  
-    	<dl>
-			<dt><a href="#"></a></dt>
-			<dd><a href="LogIn.aspx">
+ <li>  
+     <dl>
+   <dt><a href="#"></a></dt>
+   <dd><a href="LogIn.aspx">
                 <asp:Label ID="lblLogin" runat="server" Text="登入"></asp:Label></a></dd>
             <dd><a href="#">
                 <asp:Label ID="lblLogout" runat="server" Text="登出"></asp:Label></a></dd>
             <dd><a href="Register.aspx">
                 <asp:Label ID="lblSign" runat="server" Text="註冊"></asp:Label></a></dd>
-			<dd class="last"><a href="Personal.aspx">
+   <dd class="last"><a href="Personal.aspx">
                 <asp:Button ID="lblPersonal" runat="server" Text="個人頁面"></asp:Button></a></dd>
-		</dl>   
+  </dl>   
     </li> 
     </ul>
 
@@ -48,32 +48,9 @@
                 <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" OnClick="btnNew_Click" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click" />
             </div>
-<<<<<<< HEAD
-            <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1">
-                <AlternatingItemTemplate>
-                    <tr style="">
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="ReadOnly" />
-                        </td>
-                    </tr>
-                </AlternatingItemTemplate>
-=======
              <div id="articleC">
             <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1" DataKeyNames="articleID">
 
->>>>>>> refs/remotes/ji4/master
                 <EditItemTemplate>
                     <tr style="">
                         <td>
@@ -81,28 +58,15 @@
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="取消" />
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="Edit" />
-=======
                             <asp:Label ID="articleIDLabel1" runat="server" Text='<%# Eval("articleID") %>' />
                         </td>
                         <td>
                             <asp:TextBox ID="articleTitleTextBox" runat="server" Text='<%# Bind("articleTitle") %>' />
->>>>>>> refs/remotes/ji4/master
                         </td>
                         <td>
-                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="Edit" />
+                            <asp:TextBox ID="PostTimeTextBox" runat="server" Text='<%# Bind("PostTime") %>' />
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="Edit" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="Edit" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="Edit" />
-=======
                             <asp:TextBox ID="ReplyCountTextBox" runat="server" Text='<%# Bind("ReplyCount") %>' />
                         </td>
                         <td>
@@ -110,7 +74,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
->>>>>>> refs/remotes/ji4/master
                         </td>
                     </tr>
                 </EditItemTemplate>
@@ -124,31 +87,18 @@
                 <InsertItemTemplate>
                     <tr style="">
                         <td>
-                            <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="插入" ValidationGroup="Insert" />
+                            <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="插入" />
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="清除" />
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="Insert" ValidationGroup="Insert" />
-=======
                             &nbsp;</td>
                         <td>
                             <asp:TextBox ID="articleTitleTextBox" runat="server" Text='<%# Bind("articleTitle") %>' />
->>>>>>> refs/remotes/ji4/master
                         </td>
                         <td>
-                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="Insert" ValidationGroup="Insert" />
+                            <asp:TextBox ID="PostTimeTextBox" runat="server" Text='<%# Bind("PostTime") %>' />
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="Insert" ValidationGroup="Insert" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="Insert" ValidationGroup="Insert" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="Insert" ValidationGroup="Insert" />
-=======
                             <asp:TextBox ID="ReplyCountTextBox" runat="server" Text='<%# Bind("ReplyCount") %>' />
                         </td>
                         <td>
@@ -156,7 +106,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
->>>>>>> refs/remotes/ji4/master
                         </td>
                     </tr>
                 </InsertItemTemplate>
@@ -166,25 +115,12 @@
                             <asp:Label ID="articleIDLabel" runat="server" Text='<%# Eval("articleID") %>' />
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="ReadOnly" />
-=======
                             <asp:LinkButton ID="articleTitleLinkBtn" runat="server"  onClick="Button1_Click"><%# Eval("articleTitle") %></asp:LinkButton>
->>>>>>> refs/remotes/ji4/master
                         </td>
                         <td>
-                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="ReadOnly" />
+                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="ReadOnly" />
-=======
                             <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
                         </td>
                         <td>
@@ -192,7 +128,6 @@
                         </td>
                         <td>
                             <asp:Label ID="CategoryNameLabel" runat="server" Text='<%# Eval("CategoryName") %>' />
->>>>>>> refs/remotes/ji4/master
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -216,14 +151,6 @@
                         </tr>
                         <tr runat="server">
                             <td runat="server" style="">
-<<<<<<< HEAD
-                                <asp:DataPager ID="DataPager1" runat="server">
-                                    <Fields>
-                                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
-                                    </Fields>
-                                </asp:DataPager>
-=======
->>>>>>> refs/remotes/ji4/master
                             </td>
                         </tr>
                     </table>
@@ -231,28 +158,15 @@
                 <SelectedItemTemplate>
                     <tr style="">
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="articleTitle" Mode="ReadOnly" />
-=======
                             <asp:Label ID="articleIDLabel" runat="server" Text='<%# Eval("articleID") %>' />
                         </td>
                         <td>
                             <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
->>>>>>> refs/remotes/ji4/master
                         </td>
                         <td>
-                            <asp:DynamicControl runat="server" DataField="PostTime" Mode="ReadOnly" />
+                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <asp:DynamicControl runat="server" DataField="PostUser" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="ReplyCount" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:DynamicControl runat="server" DataField="CategoryID" Mode="ReadOnly" />
-=======
                             <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
                         </td>
                         <td>
@@ -260,7 +174,6 @@
                         </td>
                         <td>
                             <asp:Label ID="CategoryNameLabel" runat="server" Text='<%# Eval("CategoryName") %>' />
->>>>>>> refs/remotes/ji4/master
                         </td>
                     </tr>
                 </SelectedItemTemplate>
