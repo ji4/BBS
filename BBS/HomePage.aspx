@@ -49,25 +49,6 @@
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click" />
             </div>
             <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1">
-                <AlternatingItemTemplate>
-                    <tr style="">
-                        <td>
-                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
-                        </td>
-                        <td>
-                            <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
-                        </td>
-                        <td>
-                            <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
-                        </td>
-                        <td>
-                            <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
-                        </td>
-                        <td>
-                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
-                        </td>
-                    </tr>
-                </AlternatingItemTemplate>
                 <EditItemTemplate>
                     <tr style="">
                         <td>
@@ -124,7 +105,11 @@
                 <ItemTemplate>
                     <tr style="">
                         <td>
-                            <asp:Label ID="articleTitleLabel" runat="server" Text='<%# Eval("articleTitle") %>' />
+                        <td>
+
+                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server"  Text='<%# Eval("articleTitle") %>'>LinkButton</asp:LinkButton>
+
+                        </td>
                         </td>
                         <td>
                             <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
