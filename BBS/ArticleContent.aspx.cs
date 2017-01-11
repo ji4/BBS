@@ -18,6 +18,7 @@ public partial class ArticleContent : System.Web.UI.Page
         else Response.Redirect("~/HomePage.aspx");
 
         string szSelectArticleInfo = "select * from [articleInfo] where [articleID] = " + id;
+        //string szSelectArticleInfo = "select [CategoryName] from [Category], * from [articleInfo] where [Category.CategoryID] = " + id;
 
         string connstr = "Data Source=WIN-N4LTN1FOFQH\\SQLEXPRESS;Initial Catalog=UNI;" +
             "Integrated Security=True";

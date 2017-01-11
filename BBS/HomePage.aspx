@@ -45,12 +45,14 @@
          <div id="body">
             <div id="ArticalBar">
                 <asp:Button ID="btnHot" runat="server" CssClass="centerBarButton" Text="熱門" />
-                <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
+                <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" OnClick="btnNew_Click" />
                 <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click" />
             </div>
+             <div id="articleC">
             <asp:ListView ID="listViewArticle" runat="server" DataSourceID="SqlDataSource1" DataKeyNames="articleID">
+
                 <EditItemTemplate>
-                    <tr style="background-color: #999999;">
+                    <tr style="">
                         <td>
                             <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="更新" />
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="取消" />
@@ -71,12 +73,12 @@
                             <asp:TextBox ID="PostUserTextBox" runat="server" Text='<%# Bind("PostUser") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                            <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
                         </td>
                     </tr>
                 </EditItemTemplate>
                 <EmptyDataTemplate>
-                    <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                    <table runat="server" style="">
                         <tr>
                             <td>未傳回資料。</td>
                         </tr>
@@ -103,17 +105,17 @@
                             <asp:TextBox ID="PostUserTextBox" runat="server" Text='<%# Bind("PostUser") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="CategoryIDTextBox" runat="server" Text='<%# Bind("CategoryID") %>' />
+                            <asp:TextBox ID="CategoryNameTextBox" runat="server" Text='<%# Bind("CategoryName") %>' />
                         </td>
                     </tr>
                 </InsertItemTemplate>
                 <ItemTemplate>
-                    <tr style="background-color: #E0FFFF;color: #333333;">
-                        <td>
+                    <tr style="">
+<td>
                             <asp:Label ID="articleIDLabel" runat="server" Text='<%# Eval("articleID") %>' />
                         </td>
                         <td>
-                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server" onClick="Button1_Click"><%# Eval("articleTitle") %></asp:LinkButton>
+                            <asp:LinkButton ID="articleTitleLinkBtn" runat="server"  onClick="Button1_Click"><%# Eval("articleTitle") %></asp:LinkButton>
                         </td>
                         <td>
                             <asp:Label ID="PostTimeLabel" runat="server" Text='<%# Eval("PostTime") %>' />
@@ -125,7 +127,7 @@
                             <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                            <asp:Label ID="CategoryNameLabel" runat="server" Text='<%# Eval("CategoryName") %>' />
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -133,14 +135,14 @@
                     <table runat="server">
                         <tr runat="server">
                             <td runat="server">
-                                <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                    <tr runat="server" style="background-color: #E0FFFF;color: #333333;">
+                                <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                    <tr runat="server" style="">
                                         <th runat="server">articleID</th>
                                         <th runat="server">articleTitle</th>
                                         <th runat="server">PostTime</th>
                                         <th runat="server">ReplyCount</th>
                                         <th runat="server">PostUser</th>
-                                        <th runat="server">CategoryID</th>
+                                        <th runat="server">CategoryName</th>
                                     </tr>
                                     <tr id="itemPlaceholder" runat="server">
                                     </tr>
@@ -148,13 +150,13 @@
                             </td>
                         </tr>
                         <tr runat="server">
-                            <td runat="server" style="text-align: center;background-color: #5D7B9D;font-family: Verdana, Arial, Helvetica, sans-serif;color: #FFFFFF">
+                            <td runat="server" style="">
                             </td>
                         </tr>
                     </table>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
-                    <tr style="background-color: #E2DED6;font-weight: bold;color: #333333;">
+                    <tr style="">
                         <td>
                             <asp:Label ID="articleIDLabel" runat="server" Text='<%# Eval("articleID") %>' />
                         </td>
@@ -171,13 +173,14 @@
                             <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="CategoryIDLabel" runat="server" Text='<%# Eval("CategoryID") %>' />
+                            <asp:Label ID="CategoryNameLabel" runat="server" Text='<%# Eval("CategoryName") %>' />
                         </td>
                     </tr>
                 </SelectedItemTemplate>
              </asp:ListView>
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT [articleID], [articleTitle], [PostTime], [ReplyCount], [PostUser], [CategoryID] FROM [articleInfo]"></asp:SqlDataSource>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID;"></asp:SqlDataSource>
             文章預覽區
+             </div>
           </div>
          </div>
         <div style='clear:both;'></div>
