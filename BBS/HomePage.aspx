@@ -28,7 +28,7 @@
             <dd><a href="Register.aspx">
                 <asp:Label ID="lblSign" runat="server" Text="註冊"></asp:Label></a></dd>
 			<dd class="last"><a href="Personal.aspx">
-                <asp:Label ID="lblPersonal" runat="server" Text="個人頁面"></asp:Label></a></dd>
+                <asp:Button ID="lblPersonal" runat="server" Text="個人頁面"></asp:Button></a></dd>
 		</dl>   
     </li> 
     </ul>
