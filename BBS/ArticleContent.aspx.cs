@@ -10,6 +10,7 @@ using System.Data;
 public partial class ArticleContent : System.Web.UI.Page
 {
     string id;
+    string[] strCategoryName = { "0", "閒聊", "美食", "運動", "男", "女" };
 
     protected void Page_Load(object sender, EventArgs e)
     {
