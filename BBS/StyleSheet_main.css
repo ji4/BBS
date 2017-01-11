@@ -148,7 +148,11 @@
     width:initial;
     height:600px;
     text-align:center;
+<<<<<<< HEAD
     line-height:50px;
+=======
+    line-height:20px;
+>>>>>>> refs/remotes/ji4/master
     font-size:15px;
     color:#333;
     font-weight:bold;

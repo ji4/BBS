@@ -44,12 +44,29 @@
             </div>
          <div id="body">
             <div id="ArticalBar">
+<<<<<<< HEAD
                 <asp:Label ID="lblPostUser" runat="server"   />
                 <asp:Label ID="lblArticleTitle" runat="server"   />
                 <asp:Button ID="btnResponse" runat="server" CssClass="centerBarButton" Text="回文" OnClick="btnWrite_Click"/>
             </div>
             
             
+=======
+                <asp:Button ID="btnHot" runat="server" CssClass="centerBarButton" Text="熱門" />
+                <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
+                <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click"/>
+                <asp:Label ID="lblArticleTitle" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblArticleContent" runat="server" Text="Label"></asp:Label>
+                <br>
+                <asp:Label ID="lblPostTime" runat="server" Text="Label"></asp:Label>
+                <br>
+                <asp:Label ID="lblPostUser" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblCategoryID" runat="server" Text="Label"></asp:Label>
+            </div>
+             
+             <br />
+             <br />
+>>>>>>> refs/remotes/ji4/master
           </div>
          </div>
         <div style='clear:both;'></div>
