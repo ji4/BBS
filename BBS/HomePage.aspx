@@ -36,11 +36,11 @@
         </div>
         <div id="center">
          <div id="Sidebar">
-            <asp:Button ID="btnChat" runat="server" CssClass="sideBarButton" Text="閒聊"/>
-            <asp:Button ID="btnFood" runat="server" CssClass="sideBarButton" Text="美食"/>
-            <asp:Button ID="btnSport" runat="server" CssClass="sideBarButton" Text="運動"/>
-            <asp:Button ID="btnBoy" runat="server" CssClass="sideBarButton" Text="男"/>
-            <asp:Button ID="btnGirl" runat="server" CssClass="sideBarButton" Text="女"/>
+            <asp:Button ID="btnChat" runat="server" CssClass="sideBarButton" Text="閒聊" OnClick="btnChat_Click"/>
+            <asp:Button ID="btnFood" runat="server" CssClass="sideBarButton" Text="美食" OnClick="btnFood_Click"/>
+            <asp:Button ID="btnSport" runat="server" CssClass="sideBarButton" Text="運動" OnClick="btnSport_Click"/>
+            <asp:Button ID="btnBoy" runat="server" CssClass="sideBarButton" Text="男" OnClick="btnBoy_Click"/>
+            <asp:Button ID="btnGirl" runat="server" CssClass="sideBarButton" Text="女" OnClick="btnGirl_Click"/>
             </div>
          <div id="body">
             <div id="ArticalBar">
