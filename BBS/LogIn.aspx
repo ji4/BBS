@@ -69,8 +69,6 @@
     <div class="auto-style1" style="text-align: center; height: 118px; position: relative; top: 0px; left: 0px; width: 100%;">
     
         <span class="auto-style9">
-    
-        <asp:Image ID="Image1" runat="server" Height="118px" ImageUrl="~/image/uniPlay_logo.png" Width="116px" ImageAlign="Middle" />
         <span style="vertical-align: middle" class="auto-style11">登入</span></span></div>
          <p>
 

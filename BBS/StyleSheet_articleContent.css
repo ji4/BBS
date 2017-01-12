@@ -40,9 +40,21 @@
     width: 100px;
     margin-left:20px;
 }
+.category {
+}
 .content {
     font-size:medium;
-    margin-left:20px;
+    margin:10px;
+    width:700px;
+    height:400px;
+    text-align:left;
+    line-height:50px;
+    font-size:15px;
+    color:#333;
+    font-weight:bold;
+    background-color:#fffaf3;
+    background:rgba(100%,100%,100%,0.5); /*80%白色*/
+    float:left;
 }
 .centerBarButton {
              margin-left:20px;

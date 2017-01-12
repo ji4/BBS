@@ -51,9 +51,9 @@
 <%-- ____________ --%>
              <div id="ArticalBar2">
                  作者：
-                <asp:Label ID="lblPostUser" runat="server"  CssClass="author" />
-                <asp:Label ID="lblPostTime" runat="server" Text="Label" CssClass="time"></asp:Label>
-                 [<asp:Label ID="lblCategoryID" runat="server" Text="Label"></asp:Label>]
+                <asp:Label ID="lblPostUser" runat="server"  CssClass="author" /><br/>
+                <asp:Label ID="lblPostTime" runat="server" Text="Label" CssClass="time"></asp:Label><br/>
+                 [<asp:Label ID="lblCategoryID" runat="server" Text="Label" CssClass="category"></asp:Label>]
              </div>
              <div id="ArticalContent">
                 <asp:Label ID="lblArticleContent" runat="server" Text="Label" CssClass="content"></asp:Label>

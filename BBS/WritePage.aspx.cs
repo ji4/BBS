@@ -37,6 +37,6 @@ public partial class WritePage : System.Web.UI.Page
         int rows = cmd.ExecuteNonQuery();//檢查結果, 影響幾筆資料, >1成功
         conn.Close();
 
-        Server.Transfer("HomePage.aspx", false);
+        Server.Transfer("/BBS/HomePage.aspx", false);
     }
 }

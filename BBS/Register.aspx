@@ -57,7 +57,7 @@
     
         <span class="auto-style9">
     
-        <a href="HomePage.aspx"> <asp:Image ID="Image1" runat="server" Height="118px" ImageUrl="~/image/uniPlay_logo.png" Width="116px" ImageAlign="Middle" /></a>
+        <a href="HomePage.aspx"> <asp:Image ID="Image1" runat="server" Height="118px" ImageUrl="image/uniPlay_logo.png" Width="116px" ImageAlign="Middle" /></a>
         <span class="auto-style10" style="vertical-align: middle">註冊您的新帳戶</span></span><br />
         </div>
          <p>
@@ -111,7 +111,7 @@
                <p class="auto-style3" style="text-align: center">
        
         
-            <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="Large" Height="30px" Text="送出" Width="57px" OnClick="btnSubmit_Click" PostBackUrl="~/HomePage.aspx" />
+            <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="Large" Height="30px" Text="送出" Width="57px" OnClick="btnSubmit_Click" />
 
         </p>
                </div>

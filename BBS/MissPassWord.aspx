@@ -74,7 +74,7 @@
     
         <span class="auto-style9">
     
-       <a href="HomePage.aspx"> <asp:Image ID="Image1" runat="server" Height="118px" ImageUrl="~/image/uniPlay_logo.png" Width="116px" ImageAlign="Middle" /></a>
+       <a href="HomePage.aspx"> <asp:Image ID="Image1" runat="server" Height="118px" ImageUrl="image/uniPlay_logo.png" Width="116px" ImageAlign="Middle" /></a>
         <span style="vertical-align: middle" class="auto-style11">忘記密碼</span></span></div>
          <p>
 

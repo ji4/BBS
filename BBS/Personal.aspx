@@ -91,7 +91,7 @@
     
         <span class="auto-style9">
     
-        <a href="HomePage.aspx"> <asp:Image ID="Image1" runat="server" Height="118px" ImageUrl="~/image/uniPlay_logo.png" Width="116px" ImageAlign="Middle" /></a>
+        <a href="HomePage.aspx"> <asp:Image ID="Image1" runat="server" Height="118px" ImageUrl="image/uniPlay_logo.png" Width="116px" ImageAlign="Middle" /></a>
         <span class="auto-style10" style="vertical-align: middle">個人頁面</span></span><br />
         </div>
          <p>
@@ -100,7 +100,7 @@
            <div class="main" >
           
            <div class="photo">
-               <asp:Image ID="userPhoto" runat="server" Height="318px" Width="315px" ImageUrl="~/image/女生.jpg" />
+               <asp:Image ID="userPhoto" runat="server" Height="318px" Width="315px" ImageUrl="image/女生.jpg" />
              </div>
         <p class="auto-style8">
             姓名:

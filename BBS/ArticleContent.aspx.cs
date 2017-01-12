@@ -61,4 +61,31 @@ public partial class ArticleContent : System.Web.UI.Page
     {
         Server.Transfer("WritePage.aspx", true);
     }
+
+    protected void btnChat_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 1  ORDER BY [articleID] DESC";
+    }
+
+    protected void btnFood_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 2  ORDER BY [articleID] DESC";
+    }
+
+    protected void btnSport_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 3  ORDER BY [articleID] DESC";
+    }
+
+
+
+    protected void btnBoy_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 4  ORDER BY [articleID] DESC";
+    }
+
+    protected void btnGirl_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 5  ORDER BY [articleID] DESC";
+    }
 }
