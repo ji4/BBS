@@ -39,6 +39,10 @@
              background:rgba(100%,100%,100%,0.8); /*80%白色*/
              color:lightblue;
     }
+.btnPersonal {
+    font-weight:bold;
+    background-color:rgba(100%,100%,100%,0.1); /*10%白色*/
+}
 
 
             /* 整體設置*/ 
@@ -148,7 +152,11 @@
     width:initial;
     height:600px;
     text-align:center;
+<<<<<<< HEAD
+    line-height:50px;
+=======
     line-height:20px;
+>>>>>>> refs/remotes/ji4/master
     font-size:15px;
     color:#333;
     font-weight:bold;

@@ -22,7 +22,7 @@ public partial class Register : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        string connstr = "Data Source=WIN-N4LTN1FOFQH\\SQLEXPRESS;Initial Catalog=UNI;" +
+        string connstr = "Data Source=RUE-PC\\SQLEXPRESS;Initial Catalog=UNI;" +
             "Integrated Security=True";
         SqlConnection conn = new SqlConnection(connstr);
         SqlCommand cmd = new SqlCommand(szInsertUser, conn);
@@ -36,7 +36,8 @@ public partial class Register : System.Web.UI.Page
         conn.Open();
         int rows = cmd.ExecuteNonQuery();//檢查結果, 影響幾筆資料, >1成功
         conn.Close();
-        btnSubmit.PostBackUrl = "~/HomePage.aspx?user=" + tbxUserName.Text;  //新增這行
+        Server.Transfer("/BBS/HomePage.aspx?user=" + tbxUserName.Text, false);
+        //btnSubmit.PostBackUrl = "~/BBS/HomePage.aspx?user=" + tbxUserName.Text;  //新增這行
 
     }
 

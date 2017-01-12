@@ -17,7 +17,7 @@ public partial class HomePage : System.Web.UI.Page
     {
         if (Request.QueryString["user"] != null)
             Server.Transfer("WritePage.aspx", true);
-        else Response.Redirect("~/Login.aspx");
+        else Response.Redirect("~/BBS/Login.aspx");
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -71,5 +71,15 @@ public partial class HomePage : System.Web.UI.Page
         if (Request.QueryString["user"] != null)
             Server.Transfer("Personal.aspx", true);
         else Response.Redirect("LogIn.aspx");
+    }
+
+    protected void lblLogin_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("LogIn.aspx", false);
+    }
+
+    protected void lblSign_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("Register.aspx", false);
     }
 }

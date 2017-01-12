@@ -15,7 +15,7 @@ public partial class Personal : System.Web.UI.Page
         lblName.Text = Request.QueryString["user"];
         string szSelectGender = "select * from [UserInfo] where [UserName] = '"+ Request.QueryString["user"]+"'";
         
-        string connstr = "Data Source=WIN-N4LTN1FOFQH\\SQLEXPRESS;Initial Catalog=UNI;" +
+        string connstr = "Data Source=RUE-PC\\SQLEXPRESS;Initial Catalog=UNI;" +
             "Integrated Security=True";
         SqlConnection conn = new SqlConnection(connstr);
         SqlCommand cmd = new SqlCommand(szSelectGender, conn);
@@ -32,9 +32,9 @@ public partial class Personal : System.Web.UI.Page
         reader.Close();
 
         if (gender == "男")
-            userPhoto.ImageUrl = "~/image/男生.jpg";
+            userPhoto.ImageUrl = "image/男生.jpg";
         else if(gender=="女")
-            userPhoto.ImageUrl = "~/image/女生.jpg";
+            userPhoto.ImageUrl = "image/女生.jpg";
         int rows = cmd.ExecuteNonQuery();//檢查結果, 影響幾筆資料, >1成功
         conn.Close();
     }

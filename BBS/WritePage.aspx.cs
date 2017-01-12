@@ -21,7 +21,7 @@ public partial class WritePage : System.Web.UI.Page
 
     protected void btnSend_Click(object sender, EventArgs e)
     {
-        string connstr = "Data Source=WIN-N4LTN1FOFQH\\SQLEXPRESS;Initial Catalog=UNI;" +
+        string connstr = "Data Source=RUE-PC\\SQLEXPRESS;Initial Catalog=UNI;" +
             "Integrated Security=True";
         SqlConnection conn = new SqlConnection(connstr);
         SqlCommand cmd = new SqlCommand(szInsertArticle, conn);
@@ -37,6 +37,6 @@ public partial class WritePage : System.Web.UI.Page
         int rows = cmd.ExecuteNonQuery();//檢查結果, 影響幾筆資料, >1成功
         conn.Close();
 
-        Server.Transfer("HomePage.aspx", false);
+        Server.Transfer("/BBS/HomePage.aspx", false);
     }
 }

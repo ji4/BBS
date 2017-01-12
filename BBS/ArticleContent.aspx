@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="StyleSheet_main.css" type="text/css"/>
+    <link rel="stylesheet" href="StyleSheet_articleContent.css" type="text/css"/>
     <title></title>
 
 </head>
@@ -44,26 +44,32 @@
             </div>
          <div id="body">
             <div id="ArticalBar">
-                <asp:Button ID="btnHot" runat="server" CssClass="centerBarButton" Text="熱門" />
-                <asp:Button ID="btnNew" runat="server" CssClass="centerBarButton" Text="最新" />
-                <asp:Button ID="btnWrite" runat="server" CssClass="centerBarButton" Text="發文" OnClick="btnWrite_Click"/>
-                <asp:Label ID="lblArticleTitle" runat="server" Text="Label"></asp:Label>
-                <asp:Label ID="lblArticleContent" runat="server" Text="Label"></asp:Label>
-                <br>
-                <asp:Label ID="lblPostTime" runat="server" Text="Label"></asp:Label>
-                <br>
-                <asp:Label ID="lblPostUser" runat="server" Text="Label"></asp:Label>
-                <asp:Label ID="lblCategoryID" runat="server" Text="Label"></asp:Label>
+<%--<<<<<<< HEAD --%>
+                <asp:Label ID="lblArticleTitle" runat="server" CssClass="title"  />
+                
+             </div> 
+<%-- ____________ --%>
+             <div id="ArticalBar2">
+                 作者：
+                <asp:Label ID="lblPostUser" runat="server"  CssClass="author" /><br/>
+                <asp:Label ID="lblPostTime" runat="server" Text="Label" CssClass="time"></asp:Label><br/>
+                 [<asp:Label ID="lblCategoryID" runat="server" Text="Label" CssClass="category"></asp:Label>]
+             </div>
+             <div id="ArticalContent">
+                <asp:Label ID="lblArticleContent" runat="server" Text="Label" CssClass="content"></asp:Label>
+              </div>
             </div>
              
              <br />
              <br />
+<%-- >>>>>>> refs/remotes/ji4/master --%>
+
           </div>
          </div>
         <div style='clear:both;'></div>
         <div id="Footer"></div>
     
-    </div>
+    
     </form>
 </body>
 </html>

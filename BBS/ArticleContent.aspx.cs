@@ -21,7 +21,7 @@ public partial class ArticleContent : System.Web.UI.Page
         string szSelectArticleInfo = "select * from [articleInfo] where [articleID] = " + id;
         //string szSelectArticleInfo = "select [CategoryName] from [Category], * from [articleInfo] where [Category.CategoryID] = " + id;
 
-        string connstr = "Data Source=WIN-N4LTN1FOFQH\\SQLEXPRESS;Initial Catalog=UNI;" +
+        string connstr = "Data Source=RUE-PC\\SQLEXPRESS;Initial Catalog=UNI;" +
             "Integrated Security=True";
         SqlConnection conn = new SqlConnection(connstr);
         SqlCommand cmd = new SqlCommand(szSelectArticleInfo, conn);
@@ -60,5 +60,32 @@ public partial class ArticleContent : System.Web.UI.Page
     protected void btnWrite_Click(object sender, EventArgs e)
     {
         Server.Transfer("WritePage.aspx", true);
+    }
+
+    protected void btnChat_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 1  ORDER BY [articleID] DESC";
+    }
+
+    protected void btnFood_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 2  ORDER BY [articleID] DESC";
+    }
+
+    protected void btnSport_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 3  ORDER BY [articleID] DESC";
+    }
+
+
+
+    protected void btnBoy_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 4  ORDER BY [articleID] DESC";
+    }
+
+    protected void btnGirl_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = "SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID AND articleInfo.CategoryID = 5  ORDER BY [articleID] DESC";
     }
 }
