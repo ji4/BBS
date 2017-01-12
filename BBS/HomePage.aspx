@@ -22,20 +22,14 @@
      <dl>
    <dt><a href="#"></a></dt>
    <dd><a href="LogIn.aspx">
-                <asp:Label ID="lblLogin" runat="server" Text="登入"></asp:Label></a></dd>
+                <asp:LinkButton ID="lblLogin" runat="server" Text="登入" OnClick="lblLogin_Click"></asp:LinkButton></a></dd>
             <dd>
                 <asp:LinkButton ID="linkBtnLogout" runat="server" Text="登出" OnClick="linkBtnLogout_Click"></asp:LinkButton></dd>
             <dd><a href="Register.aspx">
-                <asp:Label ID="lblSign" runat="server" Text="註冊"></asp:Label></a></dd>
-<<<<<<< HEAD
-   <dd class="last"><a href="Personal.aspx">
-                <asp:Button ID="lblPersonal" runat="server" Text="個人頁面"></asp:Button></a></dd>
-  </dl>   
-=======
+                <asp:LinkButton ID="lblSign" runat="server" Text="註冊" OnClick="lblSign_Click"></asp:LinkButton></a></dd>
 			<dd class="last"><a href="Personal.aspx">
-                <asp:Button ID="lblPersonal" runat="server" Text="個人頁面" OnClick="lblPersonal_Click"></asp:Button></a></dd>
+                <asp:LinkButton ID="lblPersonal" runat="server" Text="個人頁面" OnClick="lblPersonal_Click" CssClass="btnPersonal"></asp:LinkButton></a></dd>
 		</dl>   
->>>>>>> refs/remotes/ji4/master
     </li> 
     </ul>
 
@@ -174,7 +168,7 @@
                         </td>
                         <td>
                             <asp:Label ID="ReplyCountLabel" runat="server" Text='<%# Eval("ReplyCount") %>' />
-                        </td>
+                        </tdsql
                         <td>
                             <asp:Label ID="PostUserLabel" runat="server" Text='<%# Eval("PostUser") %>' />
                         </td>
@@ -185,7 +179,6 @@
                 </SelectedItemTemplate>
              </asp:ListView>
              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UNIConnectionString %>" SelectCommand="SELECT articleID, articleTitle, PostTime, ReplyCount, PostUser, CategoryName FROM articleInfo, Category  WHERE articleInfo.CategoryID = Category.CategoryID  ORDER BY [articleID] DESC;"></asp:SqlDataSource>
-            文章預覽區
              </div>
           </div>
          </div>
